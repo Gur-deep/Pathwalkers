@@ -1,0 +1,36 @@
+<div class="pw-navbar hidden-sm hidden-xs">
+  <div class="pw-navbar-left">
+    <a href="#/home">
+      <img class="pw-logo" alt="logo" src="img/0-white.svg" width="120px">
+      <img class="pw-logo-scrolled" alt="logo" src="img/0-black.svg" width="120px">
+    </a>
+    <h5><strong>PATHWALKERS</strong></h5>
+  </div>
+  <div class="pw-navbar-right">
+    <span ng-class="{active: isActive('/home')}">Home</span>
+    <span ng-class="{active: isActive('/about')}">About</span>
+    <span ng-class="{active: isActive('/contact')}">Contact</span>
+  </div>
+</div>
+<script>
+  $(window).scroll(function(){
+  	if($('.pw-navbar').offset().top > 150) {
+      $('.pw-navbar').addClass('pw-navbar-scrolled');
+      $('.pw-logo-scrolled').css({
+        "display": "block"
+      });
+      $('.pw-logo').css({
+        "display": "none"
+      });
+    }
+    else {
+      $('.pw-navbar').removeClass('pw-navbar-scrolled');
+      $('.pw-logo-scrolled').css({
+        "display": "none"
+      });
+      $('.pw-logo').css({
+        "display": "block"
+      });
+    }
+  });
+</script>

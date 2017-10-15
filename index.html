@@ -1,0 +1,68 @@
+<!--
+Name: GURDEEP SINGH
+Designation: UI/UX Developer
+Date: 15 OCT, 2017
+Release: v0.1
+-->
+<!DOCTYPE html>
+<html lang="en" ng-app="pwApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <title>PATHWALKERS | BANARAS | BEAUTIFUL CITY</title>
+  <link rel="stylesheet" href="styles/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/lib/ripples.min.css">
+  <link rel="stylesheet" href="styles/lib/bootstrap-material-design.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <!--IE Support-->
+  <!-- <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
+  <!--Dev Stylesheets-->
+  <link rel="stylesheet" href="styles/dev/common.css">
+  <link rel="stylesheet" href="styles/dev/reusable.css">
+  <!--Favicon-->
+  <link rel="icon" href="img/0.ico">
+</head>
+
+<body>
+  <main>
+    <pw-header></pw-header>
+    <!--Body Begins-->
+    <div ng-view ng-cloak autoscroll="true">
+      <!--Loading Content Here-->
+    </div>
+  </main>
+  <!--Body Ends-->
+  <!--Footer Begins-->
+  <pw-footer></pw-footer>
+  <!--Footer Ends-->
+  <!--Lib Scripts-->
+  <script src="scripts/lib/jquery.min.js"></script>
+  <script src="scripts/lib/jquery.gsap.min.js"></script>
+  <script src="scripts/lib/TweenMax.min.js"></script>
+  <script src="scripts/lib/bootstrap.min.js"></script>
+  <script src="scripts/lib/material.min.js"></script>
+  <script src="scripts/lib/ripples.min.js"></script>
+  <script src="scripts/lib/angular.min.js"></script>
+  <script src="//www.google.com/recaptcha/api.js?render=explicit&onload=vcRecaptchaApiLoaded" async defer></script>
+  <script src="scripts/lib/angular-recaptcha.js"></script>
+  <script src="scripts/lib/angular-messages.min.js"></script>
+  <script src="scripts/lib/angular-route.min.js"></script>
+  <script src="scripts/lib/arrive.min.js"></script>
+  <script src="scripts/lib/visible.js"></script>
+  <!--Dev Scripts-->
+  <script src="scripts/dev/app.js"></script>
+  <script src="scripts/dev/routes.js"></script>
+  <script src="scripts/dev/directives.js"></script>
+  <!--Initialising BMD Scripts-->
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+      $.material.init();
+    });
+  </script>
+</body>
+
+</html>
