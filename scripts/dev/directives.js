@@ -16,6 +16,19 @@
         };
     });
 
+    app.directive("animatedLogo", function() {
+        return {
+            restrict: "E",
+            templateUrl: 'templates/animatedLogo.html'
+        };
+    });
+
+    app.directive("hamburg", function() {
+        return {
+            restrict: "E",
+            templateUrl: 'templates/hamburg.html'
+        };
+    });
 
     app.directive("loader", function() {
         return {

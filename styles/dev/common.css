@@ -17,8 +17,28 @@ hr {
   border-top: 1px solid #edebeb;
 }
 
+p {
+  font-size: 18px;
+}
+
 a, a:focus, a:hover {
   color: rgba(0, 0, 0, 0);
+}
+
+.pw-heading {
+  font-size: 50px;
+  font-weight: 900;
+  border-bottom: 5px solid;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.pw-subHeading {
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.pw-pmColor {
+  color: #607D8B !important;
 }
 
 
@@ -99,6 +119,7 @@ a, a:focus, a:hover {
   height: 750px;
   max-height: 759px;
 }
+
 .jumbotron::after {
   content: '';
   position: absolute;
@@ -110,9 +131,17 @@ a, a:focus, a:hover {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .pw-second-section {
-  margin-top: 100px;
 }
+
+.pw-T-margin-15vh {
+  margin-top: 15vh;
+}
+.r-T-margin-5p {
+  margin-top: 5%;
+}
+
 /*----------------------------------------------------------------------------*/
 
 .jumbotron {
@@ -136,6 +165,7 @@ a, a:focus, a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 15px;
 }
 
 .pw-home-bg-image {
@@ -160,4 +190,89 @@ a, a:focus, a:hover {
   color: #607D8B;
   font-size: 16px;
   font-weight: 600;
+}
+
+.pw-hamburg-btn {
+  position: fixed;
+  border-radius: 50%;
+  font-size: 24px;
+  height: 56px;
+  margin: auto;
+  min-width: 56px;
+  width: 56px;
+  padding: 15px;
+  overflow: hidden;
+  z-index: 8;
+  right: 5vh;
+  top: 5vh;
+  transform: scale(1);
+  background: white;
+  box-shadow: 1px 1px 5px #757575, 0px 0px 5px #757575;
+  transition: all 0.5s linear;
+}
+
+.pw-hamburg-btn.active {
+  transform: scale(50);
+}
+
+.pw-hamburg-icon {
+  position: fixed;
+  border-radius: 50%;
+  font-size: 24px;
+  height: 56px;
+  margin: auto;
+  min-width: 56px;
+  width: 56px;
+  padding: 15px;
+  overflow: hidden;
+  z-index: 99;
+  right: 5vh;
+  top: 5vh;
+  background: transparent;
+}
+
+.pw-hamburg-icon>span {
+  display: block;
+  background: #607D8B;
+  width: 100%;
+  height: 3px;
+  margin: 4px 0;
+  transition: all 0.25s linear;
+}
+
+.pw-hamburg-icon.animate>span:first-child {
+  transform: rotate(45deg);
+  transform-origin: 6px 3px;
+}
+
+.pw-hamburg-icon.animate>span:nth-child(2) {
+  display: none;
+}
+
+.pw-hamburg-icon.animate>span:last-child {
+  transform: rotate(-45deg);
+  transform-origin: 10px 3px;
+}
+
+.pw-hamburg-navigation {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding: 15px;
+  z-index: 10;
+  overflow: hidden;
+  transform: translateX(-150%);
+  transition: all 0.5s linear;
+}
+
+.pw-hamburg-navigation.active {
+  transform: translateX(0);
+}
+
+.pw-hamburg-navigation>ul>li {
+  position: relative;
+  font-size: 35px;
+  font-weight: 900;
+  color: #607d8b;
+  text-shadow: 2px 2px 1px #BDBDBD;
 }
