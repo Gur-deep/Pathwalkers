@@ -27,6 +27,7 @@ Release: v0.1
 </head>
 
 <body>
+  <main-loader class="mainLoader"></main-loader>
   <main>
     <pw-header></pw-header>
     <!--Body Begins-->
@@ -62,6 +63,9 @@ Release: v0.1
       $('[data-toggle="tooltip"]').tooltip();
       $.material.init();
     });
+    setTimeout(function () {
+      $('.mainLoader').fadeOut();
+    }, 5000);
   </script>
 </body>
 
