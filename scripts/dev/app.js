@@ -6,5 +6,8 @@
         $scope.isActive = function(viewLocation) {
             return viewLocation === $location.path();
         };
+        $scope.goTo = function (req) {
+          $location.path(req);
+        }
     });
 })();

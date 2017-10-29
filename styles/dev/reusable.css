@@ -16,3 +16,16 @@
 .r-marginT15 {
   margin-top: 15px !important;
 }
+.r-padding15 {
+  padding: 15px;
+}
+.r-paddingT100 {
+  padding-top:100px;
+}
+.r-paddingLR100 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.r-width-fit {
+  width: fit-content;
+}

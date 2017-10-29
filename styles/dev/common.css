@@ -130,6 +130,10 @@ a, a:focus, a:hover {
   border-bottom: 5px solid;
   padding-bottom: 5px;
   text-transform: uppercase;
+  text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.6);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .pw-subHeading {
@@ -186,7 +190,7 @@ a, a:focus, a:hover {
 
 .pw-navbar-scrolled>.pw-navbar-right>span {
   color: black;
-  font-weight: 400;
+  font-weight: bold;
   text-shadow: none;
 }
 
@@ -207,16 +211,33 @@ a, a:focus, a:hover {
   text-align: center;
 }
 
-.pw-navbar-right>span {
-  padding: 15px;
+.pw-logo-sm {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  margin: 0;
   color: white;
-  font-size: 16px;
+}
+
+.pw-navbar-right>span {
+  padding: 20px;
+  color: white;
+  font-size: 14px;
   font-weight: 400;
   text-shadow: 1px 1px 1px black;
   cursor: pointer;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
-.pw-first-section {
+.pw-navbar-right>span.active {
+  border-bottom: 5px solid;
+}
+
+.pw-home-section {
   height: 750px;
   max-height: 759px;
 }
@@ -235,8 +256,8 @@ a, a:focus, a:hover {
 
 .pw-second-section {}
 
-.pw-T-margin-15vh {
-  margin-top: 15vh;
+.pw-T-margin-25vh {
+  margin-top: 25vh;
 }
 
 .r-T-margin-5p {
@@ -292,6 +313,8 @@ a, a:focus, a:hover {
   color: #607D8B;
   font-size: 16px;
   font-weight: 600;
+  margin-top: 15px;
+  text-transform: uppercase;
 }
 
 .pw-hamburg-btn {
@@ -377,4 +400,53 @@ a, a:focus, a:hover {
   font-weight: 900;
   color: #607d8b;
   text-shadow: 2px 2px 1px #BDBDBD;
+}
+
+.pw-bg-paint-effect {
+  background: url(../../img/9.png) #b0bec5 no-repeat;
+  background-size: 100% 100%;
+  padding: 0 50px;
+}
+
+
+/*paths page styles*/
+
+.pw-paths-section {
+  background: url('../../img/10.jpg') no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.pw-paths-section::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 25vw;
+  width: 100%;
+  background-image: url(../../img/2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pw-counts {
+  color: #607d8b;
+    font-size: 75px;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+    padding: 0 50px;
+    margin-bottom: 35px;
+    text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.pw-counts::after {
+  content: attr(data-count);
+  font-size: 200px;
+  font-weight: 900;
+  opacity: 0.3;
+  position: absolute;
+  left: -15px;
+  top: -85px;
+  text-shadow: none;
 }

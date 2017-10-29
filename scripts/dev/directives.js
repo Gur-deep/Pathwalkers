@@ -5,7 +5,8 @@
     app.directive("pwHeader", function() {
         return {
             restrict: "E",
-            templateUrl: "templates/header.html"
+            templateUrl: "templates/header.html",
+            controller: "HeaderCtrl"
         };
     });
 

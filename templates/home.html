@@ -1,4 +1,4 @@
-<section class="pw-first-section" aria-label="first section">
+<section class="pw-home-section pw-first-section" aria-label="first section">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 r-padding0 r-pos-rel">
@@ -13,11 +13,11 @@
       </div>
     </div>
 </section>
-<section class="pw-second-section pw-T-margin-15vh" aria-label="second section">
+<section class="pw-second-section pw-T-margin-25vh" aria-label="second section">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="pw-pmColor pw-heading">Pathwalkers</h1>
+        <h1 class="pw-pmColor pw-heading"><strong class="pw-bg-paint-effect">Pathwalkers</strong></h1>
         <h3 class="pw-pmColor pw-subHeading text-capitalize">Let's walk the talk.</h3>
         <p class="text-capitalize">
           Varanasi/ Kashi / Banaras , a city which has had many names , people , kings and just one purpose ie Moksha/Nirvana/Liberation. So many came in this search and developed themselves and grew in this city of light. It can take days/years or even many births to understand what this place really stands for. There's a lot to explore.
@@ -31,7 +31,7 @@
   </div>
 </section>
 <section>
-  <div class="container pw-T-margin-15vh">
+  <div class="container pw-T-margin-25vh">
     <div class="row">
       <div class="col-md-4 text-center">
         <img src="img/5.svg" alt="save time" width="100" imageonload>
@@ -57,14 +57,14 @@
     </div>
   </div>
 </section>
-<section class="pw-second-section pw-T-margin-15vh" aria-label="second section">
+<section class="pw-third-section pw-T-margin-25vh" aria-label="third section">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <img class="img-responsive" src="img/4.png" alt="second image" imageonload>
+        <img class="img-responsive" src="img/4.png" alt="third image" imageonload>
       </div>
       <div class="col-md-6">
-        <h1 class="pw-pmColor pw-heading">varanasi?</h1>
+        <h1 class="pw-pmColor pw-heading"><strong class="pw-bg-paint-effect">varanasi</strong></h1>
         <h3 class="pw-pmColor pw-subHeading text-capitalize">Why Pathwalkers?</h3>
         <p class="text-capitalize">
           2011 Sept , I was here for a couple of days en route to Nepal traveling from Bombay and took a stop in Banaras. It just took me two hours to decide that I want to leave the corporate life in Mumbai , and spend time exploring Kashi through my video camera . This helped me gain a lot of insight, information and experience of what it can hold for various seekers coming from all over the world.
@@ -73,8 +73,25 @@
     </div>
   </div>
 </section>
+<section class="pw-fourth-section pw-T-margin-25vh" aria-label="fourth section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="pw-pmColor pw-heading"><strong class="pw-bg-paint-effect">paths</strong></h1>
+        <h3 class="pw-pmColor pw-subHeading text-capitalize">Travel brings happiness into the life</h3>
+        <p class="text-capitalize">
+          Travel at its truest is thus an ironic experience, and the best travelers. seem to be those able to hold two or three inconsistent ideas in their minds at the same time, or able to regard themselves as at once serious persons and clowns.
+        </p>
+        <button class="pw-btn" ng-click="goTo('/paths')">view all paths</button>
+      </div>
+      <div class="col-md-6">
+        <img class="img-responsive" src="img/8.png" alt="fourth image" imageonload>
+      </div>
+    </div>
+  </div>
+</section>
 <script>
-  function touches(e) {
+  $('.pw-first-section').mousemove(function(e) {
     var x = e.touches ? e.touches[0].clientX : e.clientX,
       y = e.touches ? e.touches[0].clientY : e.clientY;
     var w = window.innerWidth / 2;
@@ -87,10 +104,7 @@
       top: t + "%",
       left: l + "%"
     });
-  }
-  window.addEventListener("mousemove", touches);
-  window.addEventListener("touchstart", touches);
-  window.addEventListener("touchmove", touches);
+  });
 
 
   var lastScrollTop = 0;

@@ -1,15 +1,15 @@
 <div class="pw-navbar hidden-sm hidden-xs">
   <div class="pw-navbar-left">
     <a href="#/home">
-      <img class="pw-logo" alt="logo" src="img/0-white.svg" width="120px">
-      <img class="pw-logo-scrolled" alt="logo" src="img/0-black.svg" width="120px">
+      <img class="pw-logo" alt="logo" src="img/0-white.svg" width="100px">
+      <img class="pw-logo-scrolled" alt="logo" src="img/0-black.svg" width="100px">
     </a>
     <h5><strong>PATHWALKERS</strong></h5>
   </div>
   <div class="pw-navbar-right">
-    <span ng-class="{active: isActive('/home')}">Home</span>
-    <span ng-class="{active: isActive('/about')}">About</span>
-    <span ng-class="{active: isActive('/contact')}">Contact</span>
+    <span ng-class="{active: isActive('/home')}" ng-click="goTo('/home')">Home</span>
+    <span ng-class="{active: isActive('/paths')}" ng-click="goTo('/paths')">Paths</span>
+    <span ng-class="{active: isActive('/contact')}" ng-click="goTo('/contact')">Contact</span>
   </div>
 </div>
 <!-- small view navigation -->
@@ -33,6 +33,39 @@
       $('.pw-logo').css({
         "display": "block"
       });
+    }
+    if($(window).scrollTop() - $('.pw-first-section').offset().top > $('.pw-first-section').height() - 75) {
+      $('.pw-hamburg-btn').css({
+        "background": "#607d8b"
+      })
+      $('.pw-hamburg-icon span').css({
+        "background": "#fff"
+      })
+      $('.pw-hamburg-navigation h1').css({
+        color: "#fff",
+        "font-weight": 400
+      })
+      $('.pw-hamburg-navigation ul li').css({
+        color: "#fff",
+        "text-shadow": "2px 2px 1px #ffff"
+      })
+    }
+    else {
+      $('.pw-hamburg-btn').css({
+        "background": "#fff"
+      })
+      $('.pw-hamburg-icon span').css({
+        "background": "#607d8b"
+      })
+      $('.pw-hamburg-navigation h1').css({
+        color: "#607d8b",
+        "text-shadow": "2px 2px 3px rgba(0, 0, 0, 0.5)",
+        "font-weight": 400
+      })
+      $('.pw-hamburg-navigation ul li').css({
+        color: "#607d8b",
+        "text-shadow": "2px 2px 3px rgba(0, 0, 0, 0.5)"
+      })
     }
   });
 </script>
