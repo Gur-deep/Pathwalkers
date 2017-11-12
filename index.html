@@ -47,11 +47,8 @@ Release: v0.1
   <script src="scripts/lib/material.min.js"></script>
   <script src="scripts/lib/ripples.min.js"></script>
   <script src="scripts/lib/angular.min.js"></script>
-  <script src="//www.google.com/recaptcha/api.js?render=explicit&onload=vcRecaptchaApiLoaded" async defer></script>
-  <script src="scripts/lib/angular-recaptcha.js"></script>
   <script src="scripts/lib/angular-messages.min.js"></script>
   <script src="scripts/lib/angular-route.min.js"></script>
-  <script src="scripts/lib/arrive.min.js"></script>
   <script src="scripts/lib/visible.js"></script>
   <!--Dev Scripts-->
   <script src="scripts/dev/app.js"></script>
@@ -63,9 +60,15 @@ Release: v0.1
       $('[data-toggle="tooltip"]').tooltip();
       $.material.init();
     });
-    setTimeout(function () {
+    setTimeout(function() {
       $('.mainLoader').fadeOut();
-    }, 10000);
+    }, 5000);
+  </script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("user_fwiE0i8qjhmZNmzEMRSwS");
+    })();
   </script>
 </body>
 

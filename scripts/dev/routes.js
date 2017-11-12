@@ -5,6 +5,10 @@ angular.module("pwApp").config(function($routeProvider) {
     .when("/paths", {
       templateUrl: "templates/paths.html"
     })
+    .when("/contact", {
+      templateUrl: "templates/contact.html",
+      controller: "ContactCtrl"
+    })
     .otherwise({
       redirectTo: "/home"
     });

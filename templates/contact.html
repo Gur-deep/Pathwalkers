@@ -1,0 +1,68 @@
+<section class="pw-first-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 r-padding0">
+        <div class="pw-paths-section">
+          <div class="r-paddingT100 r-paddingLR100 hidden-sm hidden-xs">
+            <h1 class="r-margin0 pw-heading" style="border:none;"><b class="r-white r-txt-shdow">Contact US</b></h1>
+            <h1 class="r-margin0 r-white r-txt-shdow text-uppercase"><strong>Get Connected with us</strong></h1>
+            <h3 class="r-margin0 r-white r-txt-shdow text-uppercase">With Simple Drop An Email!</h3>
+          </div>
+          <div class="r-paddingT100 r-padding15 hidden-xl hidden-lg hidden-md">
+            <h1 class="r-margin0 pw-heading" style="border:none;"><b class="r-white r-txt-shdow">Contact US</b></h1>
+            <h1 class="r-margin0 r-white r-txt-shdow text-uppercase"><strong>Get Connected with us</strong></h1>
+            <h3 class="r-margin0 r-white r-txt-shdow text-uppercase">With Simple Drop An Email!</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="row pw-T-margin-25vh">
+    <div class="col-lg-6 text-center r-paddingT100 hidden-sm">
+      <img src="img/11.svg" alt="contact us" width="50%" imageonload>
+    </div>
+    <div class="col-lg-6">
+      <h1 class="pw-pmColor pw-heading"><strong class="pw-bg-paint-effect">Contact Us</strong></h1>
+      <div class="alert alert-dismissible alert-success text-uppercase"  ng-show="success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Great!</strong> we Will contact you with in 24 hrs.
+      </div>
+      <form name="contactForm" ng-submit="submit()" novalidate>
+        <div class="form-group r-margin0">
+          <label class="control-label">Name <span class="text-danger">*</span></label>
+          <input type="text" name="name" ng-model="contact.name" class="form-control" placeholder="Enter Your Name" required>
+          <div class="text-danger" ng-messages="contactForm.name.$error" ng-show="contactForm.name.$touched">
+              <div ng-messages-include="templates/messages.html"></div>
+          </div>
+        </div>
+        <div class="form-group r-margin0">
+          <label class="control-label">Email <span class="text-danger">*</span></label>
+          <input type="email" name="email" ng-model="contact.email" class="form-control" placeholder="Enter Your Email" required>
+          <div class="text-danger" ng-messages="contactForm.email.$error" ng-show="contactForm.email.$touched">
+              <div ng-messages-include="templates/messages.html"></div>
+          </div>
+        </div>
+        <div class="form-group r-margin0">
+          <label class="control-label">Phone <span class="text-danger">*</span></label>
+          <input type="number" name="phone" ng-model="contact.phone" class="form-control" placeholder="Enter Your Phone" required>
+          <div class="text-danger" ng-messages="contactForm.phone.$error" ng-show="contactForm.phone.$touched">
+              <div ng-messages-include="templates/messages.html"></div>
+          </div>
+        </div>
+        <div class="form-group r-margin0">
+          <label class="control-label">Message</label>
+          <textarea name="message" ng-model="contact.message" rows="3" class="form-control" placeholder="Enter Your Message"></textarea>
+          <div class="text-danger" ng-messages="contactForm.message.$error" ng-show="contactForm.message.$touched">
+              <div ng-messages-include="templates/messages.html"></div>
+          </div>
+        </div>
+        <div class="text-right">
+          <button ng-hide="isLoading" type="submit" class="pw-btn" ng-disabled="contactForm.$invalid">submit</button>
+          <loader ng-show="isLoading"></loader>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

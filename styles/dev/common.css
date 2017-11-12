@@ -151,18 +151,14 @@ a, a:focus, a:hover {
 
 .form-control, .form-group .form-control {
   border: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2)) !important;
-  background-image: -webkit-linear-gradient(#000, #000), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
-  background-image: -o-linear-gradient(#000, #000), -o-linear-gradient(#D2D2D2, #D2D2D2);
-  background-image: linear-gradient(#000, #000), linear-gradient(#D2D2D2, #D2D2D2) !important;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#607D8B), to(#607D8B)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2)) !important;
+  background-image: -webkit-linear-gradient(#607D8B, #607D8B), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: -o-linear-gradient(#607D8B, #607D8B), -o-linear-gradient(#D2D2D2, #D2D2D2);
+  background-image: linear-gradient(#607D8B, #607D8B), linear-gradient(#D2D2D2, #D2D2D2) !important;
 }
 
 .form-group.is-focused label.control-label {
-  color: #000;
-}
-
-.has-error .input-group-addon {
-  color: #000 !important;
+  color: #607D8B;
 }
 
 
@@ -317,6 +313,11 @@ a, a:focus, a:hover {
   text-transform: uppercase;
 }
 
+.pw-btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .pw-hamburg-btn {
   position: fixed;
   border-radius: 50%;
@@ -431,13 +432,13 @@ a, a:focus, a:hover {
 
 .pw-counts {
   color: #607d8b;
-    font-size: 75px;
-    text-transform: uppercase;
-    font-weight: 900;
-    position: relative;
-    padding: 0 50px;
-    margin-bottom: 35px;
-    text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.6);
+  font-size: 75px;
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+  padding: 0 50px;
+  margin-bottom: 35px;
+  text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .pw-counts::after {
@@ -450,3 +451,30 @@ a, a:focus, a:hover {
   top: -85px;
   text-shadow: none;
 }
+
+
+/*media quiers*/
+
+
+/*xs*/
+
+@media (max-width:767px) {
+  .pw-heading {
+    font-size: 9vw;
+  }
+}
+
+
+/*sm*/
+
+@media (min-width:768px) and (max-width:991px) {}
+
+
+/*md*/
+
+@media (min-width:992px) and (max-width:1199px) {}
+
+
+/*lg*/
+
+@media (min-width:1200px) {}
